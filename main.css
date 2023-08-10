@@ -1,0 +1,89 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(assets/stone.jpg);
+    height: 97vh;
+}
+div#aviso{
+    position: absolute;
+    z-index: 2;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 0.5vw;
+    display: flex;
+    place-items: center;
+    flex-direction: column;
+    display: none;
+}
+div.quiz{
+    flex: none;
+    text-align: center;
+}
+div.pergunta{
+    font-size: 2rem;
+    background-color: whitesmoke;
+    padding: 0.75vw;
+    max-width: 100vh;
+}
+div.alternativas{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 0.75vw;
+    margin-top: 1.25vw;
+    background-color: whitesmoke;
+    padding: 0.75vw;
+    flex-wrap: wrap;
+}
+div.alternativas button{
+    font-size: 1.25rem;
+    max-width: 20vh;
+}
+div.pontos{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 1.25vw;
+}
+div#acertos{
+    background-color: green;
+    padding: 0.75vw;
+    font-size: 1.25rem;
+}
+div#erros{
+    background-color: red;
+    padding: 0.75vw;
+    font-size: 1.25rem;
+}
+div.dificuldade{
+    background-color: yellow;
+    margin-top: 1.25vw;
+    padding: 0.75vw;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+div#botao{
+    position: relative;
+    width: 4vw;
+    height: 1.75vw;
+    background-color: lightgray;
+    margin-left: 0.5vw;
+    border-radius: 25%;
+}
+div#botao input {
+    position: absolute;
+    width: 1.75vw;
+    height: 1.75vw;
+    top: -0.2vw;
+    transform: translateX(-130%) scale(125%);
+    transition: 1s;
+    appearance: none;
+    background-color: gray;
+    border-radius: 50%;
+}
+div#botao input:checked{
+    transform: translateX(0) scale(125%);
+    background-color:cyan;
+}
